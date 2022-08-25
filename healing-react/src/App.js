@@ -5,12 +5,14 @@ import { useState } from 'react';
 function App() {
 
   let post = '강남 우동 맛집'; // JSX 변수 let, var, const
-  let [title1, setTitle1] = useState('남자 코트 추천') // a: 문자열, b: state 변경을 도와주는 함수
-  let [title2, setTitle2] = useState('강남 우동 맛집')
-  let [title3, setTitle3] = useState('파이썬 독학')
-
   let [arr, setArr] = useState(['여자 코트 추천','맛집 추천', '자바 독학']) // array도 가능
+  let [like, setLike]= useState(0);
   // Destructuring 문법
+
+  function myfunc(){ // 람다 ()=>{ ~~~ }
+    console.log("따봉");
+    setLike(like+1);
+  }
 
 
   return ( // return() 안에는 병렬로 2개 이상 기입금지
@@ -20,15 +22,15 @@ function App() {
       </div>
 
       <div className="list">
-        <h4>title1</h4>
+        <h4>{ arr[0] } <span onClick={myfunc}>👍</span> { like }</h4>
         <p>8월 25일 발행</p>
       </div>
       <div className="list">
-        <h4>title2</h4>
+        <h4>{ arr[1] }</h4>
         <p>8월 25일 발행</p>
       </div>
       <div className="list">
-        <h4>title3<</h4>
+        <h4>{ arr[2] }</h4>
         <p>8월 25일 발행</p>
       </div>
 
