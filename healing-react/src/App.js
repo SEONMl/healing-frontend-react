@@ -46,7 +46,8 @@ function App() {
         <p>8월 25일 발행</p>
       </div>
 
-      <h4>{ post }</h4>
+      <Modal/>
+
     </div>
   );
 }
