@@ -21,6 +21,18 @@ function App() {
         <h4 style={{color:'yellow', fontSize: '16px'}}>ReactBlog</h4>
       </div>
 
+      <Button onClick={ ()=> {
+          // arr[0]="남자 코트 추천"; 원본데이터는 냄겨두기
+          let copy = [...arr]; // 독립적인 arr 사본 생성
+          copy[0] = "남자 코트 추천";
+          setArr(copy);
+        }}>글 수정</Button>
+
+      <Button onClick = {()=>{
+        let copy = [...arr.sort];
+        setArr(copy);
+      }}>가나다 순 정렬</Button>
+
       <div className="list">
         <h4>{ arr[0] } <span onClick={myfunc}>👍</span> { like }</h4>
         <p>8월 25일 발행</p>
