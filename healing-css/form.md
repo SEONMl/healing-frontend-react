@@ -53,3 +53,72 @@ CSS에서 C는 Cascading을 의미한다.
 >2. 인라인 스타일: 태그 안에 style 속성에 적용한 스타일
 >3. id 스타일
 >4. 타입 스타일
+
+---
+## 스타일 속성
+
+### 글꼴 관련 스타일
+> - font-family : "<글꼴1>" | [<글꼴2>, <글꼴3>]
+> - font-size : <절대 크기> | <상대 크기> | <크기> | <백분율>
+> - font-syle : normal | italic (== oblique)
+> - font-weight : normal | bold | bolder ..
+
+### 웹 폰트 사용하기
+> ```css
+> @import url("URL~~");
+>
+> @font-face {
+>     font-family: <글꼴 이름>;
+>     src: <글꼴 파일>;
+> }
+>```
+
+### 텍스트 관련 스타일
+> - color : <색상> // 16진수, hsl, 영문명 등으로 표현
+> - text-align : start | end | left | right | center | justify(양쪽 문단에 맞춰 정렬) | match-parent
+> - line-height : <크기> // 줄 간격
+> - text-decoration : none | underline | overline | line-through
+> - text-shadow : none | <가로 거리> <세로 거리> <번짐 정도> <색상>
+> - text-transform : none | capitalize | uppercase | lowercase | full--width
+> - letter-spacing : <글자 간격 크기>
+> - word-spacing : <단어 간격 크기>
+
+### 목록 스타일
+>- list-style
+> - list-style-type : disc | circle | square ...
+>- list-style-image : <이미지 파일 경로>
+>- list-style-position : inside | outside
+
+### 표 스타일
+>- caption-side : top | bottom 
+>- border: <테두리 두께> <줄 모양>
+>- border-spacing : <수평 거리> <수직 거리>
+>- border-collapse : collapse | separate // 표와 셀 테두리를 합칠 것인지 따로 표시할 것인지
+---
+## Box Model 
+: 콘텐츠 영역 Content -> 패딩 Padding -> 테두리 Border -> 마진 Margin
+ ### 박스 스타일
+>- box-sizing : border-bos(테두리까지의 너빗값) | content-box(기본값)
+>- width // 박스의 고정 너비
+>- height // 박스의 고정 높이
+>- box-shadow : <수평 거리> <수직 거리> <흐림 정도> <번짐 정도> <색상> inset(안쪽 그림자)
+
+### 테두리 스타일 
+>- border-style : none, hidden, solid, dotted, dashed, double, groove, inset, outset, ridge
+>- border-width : <크기> | thin | medium | thick
+>- border-color
+>- border-radius : <반지름 크기> | <백분율> // 둥근 모서리\
+>  border-top-left-radius / border-bottom-right-radius 처럼 따로 설정할 수 있음
+
+### 여백 스타일
+> - margin : <크기> | <백분율> | auto
+
+### 레이아웃
+>- display : block | inline | inline-block | none
+>- float : left | right | none 
+>- clear : left | right | both (float속성 해제)
+
+### 웹 요소의 위치 지정하기
+>- position : static(고정) | relative(고정, 위치 지정 가능) | absolute(기준이 상위 요소) | fixed(브라우저 창이 기준 위치)
+>- left | right | top | bottom : <떨어질 거리 크기>
+
