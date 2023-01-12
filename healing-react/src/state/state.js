@@ -4,6 +4,10 @@
 import React from "react";
 
 class StateApp extends React.Component{
+    constructor(props){
+        super(props);
+        console.log("constructed");
+    }
     state = {
         count: 0,
     };
@@ -16,6 +20,7 @@ class StateApp extends React.Component{
         }));
     }
     render() {
+        console.log("I'm rendering");
         return  (
         <div>
             <h1>The number is: {this.state.count}</h1>
@@ -23,6 +28,16 @@ class StateApp extends React.Component{
             <button onClick={this.minus}>Minus</button>
         </div>
         );
+    }
+
+    componentDidMount() {
+        console.log("component redered");
+    }
+    componentDidUpdate() {
+        console.log("I just updated");
+    }
+    componentWillUnmount() {
+        console.log("good bye");
     }
 }
 
